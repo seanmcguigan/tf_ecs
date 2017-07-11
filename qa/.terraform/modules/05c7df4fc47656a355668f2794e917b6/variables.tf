@@ -1,9 +1,0 @@
-variable "iam_role" {}
-variable "service_name" {}
-variable "cluster_name" {}   
-variable "desired_count" {}
-variable "target_group_arn" {}
-variable "container_name" {}
-variable "container_port" {}
-variable "task_definition_arn" {}
-variable "environment" {}

@@ -1,1 +1,0 @@
-variable "autoscaling_group_name" {}
