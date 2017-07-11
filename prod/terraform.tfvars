@@ -1,6 +1,0 @@
-ENV = "prod"
-PRODUCT = "onkyo-store"
-TEAM = "systems"
-SSL_CERT = "arn:aws:acm:eu-west-1:469564823659:certificate/ef74eaa3-7c9a-4ec7-85a0-b71e7c351cbf"
-PROFILE = "onkyo-store"
-REGION = "eu-west-1"
