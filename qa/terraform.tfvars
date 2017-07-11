@@ -1,0 +1,6 @@
+ENV = "qa"
+PRODUCT = "onkyo-store"
+TEAM = "systems"
+SSL_CERT = "arn:aws:acm:eu-west-1:469564823659:certificate/bd6ce908-ba4c-4f68-8ee5-a22e347085a0"
+PROFILE = "onkyo-store"
+REGION = "eu-west-1"

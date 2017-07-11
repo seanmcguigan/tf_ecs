@@ -1,0 +1,70 @@
+{
+    "containerDefinitions": [
+        {
+            "name": "dd-agent",
+            "image": "datadog/docker-dd-agent:latest",
+            "memory": "128",
+            "cpu": "10",
+            "essential": true,
+            "portMappings": [],
+            "environment": [
+                {
+                    "name": "API_KEY",
+                    "value": "b73bc1ca9a8cf2283ae43c05d088fd3b"
+                },
+                {
+                    "name": "TAGS",
+                    "value": "onkyo-store"
+                }
+            ],
+            "mountPoints": [
+                {
+                    "sourceVolume": "docker_sock",
+                    "containerPath": "/var/run/docker.sock",
+                    "readOnly": ""
+                },
+                {
+                    "sourceVolume": "proc",
+                    "containerPath": "/host/proc/",
+                    "readOnly": true
+                },
+                {
+                    "sourceVolume": "cgroup",
+                    "containerPath": "/host/sys/fs/cgroup",
+                    "readOnly": true
+                }
+            ],
+            "volumesFrom": null,
+            "hostname": null,
+            "user": null,
+            "workingDirectory": null,
+            "extraHosts": null,
+            "logConfiguration": null,
+            "ulimits": null,
+            "dockerLabels": null
+        }
+    ],
+    "volumes": [
+        {
+            "name": "docker_sock",
+            "host": {
+                "sourcePath": "/var/run/docker.sock"
+            }
+        },
+        {
+            "name": "proc",
+            "host": {
+                "sourcePath": "/proc/"
+            }
+        },
+        {
+            "name": "cgroup",
+            "host": {
+                "sourcePath": "/cgroup/"
+            }
+        }
+    ],
+    "networkMode": "bridge",
+    "placementConstraints": [],
+    "family": "dd-agent-task"
+}
